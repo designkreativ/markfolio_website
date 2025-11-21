@@ -17,6 +17,7 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
+import { Button } from "./ui/button"
 
 const servicesData: { title: string; href: string; description: string }[] = [
   {
@@ -132,7 +133,13 @@ export function NavbarMenu() {
         <NavigationMenuItem>
           
       <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-            <Link href="/contactUs" className="border border-white-100 border-opacity-10">Contact Us</Link>
+        <Button variant="outline" size="lg" className="font-bold">
+        <Link
+          href="/contactUs"
+        >
+          Contact Us
+        </Link>
+        </Button>
           </NavigationMenuLink>
         </NavigationMenuItem>
       </NavigationMenuList>
