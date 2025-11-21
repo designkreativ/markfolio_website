@@ -1,6 +1,8 @@
 "use client"
 
 import * as React from "react"
+import Image from "next/image"
+import Logo from "@/assets/markfolioLogo.svg"
 import Link from "next/link"
 import { CircleCheckIcon, CircleHelpIcon, CircleIcon, Navigation } from "lucide-react"
 
@@ -16,103 +18,68 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
 
-const components: { title: string; href: string; description: string }[] = [
+const servicesData: { title: string; href: string; description: string }[] = [
   {
-    title: "Alert Dialog",
-    href: "/docs/primitives/alert-dialog",
+    title: "Search Engine Optimization",
+    href: "/services",
     description:
-      "A modal dialog that interrupts the user with important content and expects a response.",
+      "Through careful keyword research, we can help you achieve high rankings in the major search engines",
   },
   {
-    title: "Hover Card",
-    href: "/docs/primitives/hover-card",
+    title: "Software Development",
+    href: "/services",
     description:
       "For sighted users to preview content available behind a link.",
   },
   {
-    title: "Progress",
-    href: "/docs/primitives/progress",
+    title: "Social Media Marketing",
+    href: "/services",
     description:
-      "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
+      "Social media is a critical element in staying connected with your audience,",
   },
   {
-    title: "Scroll-area",
-    href: "/docs/primitives/scroll-area",
-    description: "Visually or semantically separates content.",
+    title: "Web Design Development",
+    href: "/services",
+    description: "With millions of websites, you want to be sure your website stands out and helps your business grow",
   },
-  {
-    title: "Tabs",
-    href: "/docs/primitives/tabs",
-    description:
-      "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
-  },
-  {
-    title: "Tooltip",
-    href: "/docs/primitives/tooltip",
-    description:
-      "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
-  },
+ 
 ]
 
 export function NavbarMenu() {
   const isMobile = useIsMobile()
 
   return (
-    <div className="w-full flex items-center justify-center mx-auto py-4 bg-blue-200">
+    <div className="w-full flex items-center justify-center mx-auto py-4  text-white">
     
-    <NavigationMenu viewport={isMobile} className="container flex justify-between px-4 max-w-[1440px] bg-red-300">
+    <NavigationMenu viewport={isMobile} className="container flex justify-between px-4 max-w-[1440px] ">
       <NavigationMenuList>
         <NavigationMenuItem>
-      <h2>Logo</h2>
+          
+          <Image src={Logo} alt="Logo" width={140} height={60} />
           </NavigationMenuItem>
       </NavigationMenuList>
 
       <NavigationMenuList className="flex-wrap">
       
 
-        <NavigationMenuItem>
-          <NavigationMenuTrigger>Home</NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid gap-2 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-              <li className="row-span-3">
-                <NavigationMenuLink asChild>
-                  <Link
-                    className="from-muted/50 to-muted flex h-full w-full flex-col justify-end rounded-md bg-linear-to-b p-4 no-underline outline-hidden transition-all duration-200 select-none focus:shadow-md md:p-6"
-                    href="/"
-                  >
-                    <div className="mb-2 text-lg font-medium sm:mt-4">
-                      shadcn/ui
-                    </div>
-                    <p className="text-muted-foreground text-sm leading-tight">
-                      Beautifully designed components built with Tailwind CSS.
-                    </p>
-                  </Link>
-                </NavigationMenuLink>
-              </li>
-              <ListItem href="/docs" title="Introduction">
-                Re-usable components built using Radix UI and Tailwind CSS.
-              </ListItem>
-              <ListItem href="/docs/installation" title="Installation">
-                How to install dependencies and structure your app.
-              </ListItem>
-              <ListItem href="/docs/primitives/typography" title="Typography">
-                Styles for headings, paragraphs, lists...etc
-              </ListItem>
-            </ul>
-          </NavigationMenuContent>
+        <NavigationMenuItem className="">
+          <NavigationMenuLink asChild className={navigationMenuTriggerStyle()} >
+            <Link href="/" >Home</Link>
+          </NavigationMenuLink>
         </NavigationMenuItem>
 
         <NavigationMenuItem>
           <NavigationMenuTrigger>Services</NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className="grid gap-2 sm:w-[400px] md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-              {components.map((component) => (
+            <ul className="grid gap-2 sm:w-[400px] md:w-[500px] md:grid-cols-2 lg:w-[600px] rounded-none ">
+              {servicesData.map((service) => (
                 <ListItem
-                  key={component.title}
-                  title={component.title}
-                  href={component.href}
+                  key={service.title}
+                  title={service.title}
+                  href={service.href}
+                  
                 >
-                  {component.description}
+                  {service.description}
                 </ListItem>
               ))}
             </ul>
@@ -125,24 +92,24 @@ export function NavbarMenu() {
             <ul className="grid w-[300px] gap-4">
               <li>
                 <NavigationMenuLink asChild>
-                  <Link href="#">
-                    <div className="font-medium">Components</div>
+                  <Link href="/portfolio">
+                    <div className="font-medium">Graphic Design</div>
                     <div className="text-muted-foreground">
                       Browse all components in the library.
                     </div>
                   </Link>
                 </NavigationMenuLink>
                 <NavigationMenuLink asChild>
-                  <Link href="#">
-                    <div className="font-medium">Documentation</div>
+                  <Link href="/portfolio">
+                    <div className="font-medium">Web Design Development</div>
                     <div className="text-muted-foreground">
                       Learn how to use the library.
                     </div>
                   </Link>
                 </NavigationMenuLink>
                 <NavigationMenuLink asChild>
-                  <Link href="#">
-                    <div className="font-medium">Blog</div>
+                  <Link href="/portfolio">
+                    <div className="font-medium">Software Development</div>
                     <div className="text-muted-foreground">
                       Read our latest blog posts.
                     </div>
@@ -155,7 +122,7 @@ export function NavbarMenu() {
 
         <NavigationMenuItem>
           <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-            <Link href="/docs">Pricing</Link>
+            <Link href="/pricing">Pricing</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
         
@@ -164,7 +131,9 @@ export function NavbarMenu() {
       <NavigationMenuList>
         <NavigationMenuItem>
           
-      <h2>Contact Us</h2>
+      <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+            <Link href="/contactUs" className="border border-white-100 border-opacity-10">Contact Us</Link>
+          </NavigationMenuLink>
         </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
