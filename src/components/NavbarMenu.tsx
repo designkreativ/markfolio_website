@@ -71,7 +71,7 @@ export function NavbarMenu() {
 
         <NavigationMenuItem>
           <NavigationMenuTrigger>Services</NavigationMenuTrigger>
-          <NavigationMenuContent>
+          <NavigationMenuContent >
             <ul className="grid gap-2 sm:w-[400px] md:w-[500px] md:grid-cols-2 lg:w-[600px] rounded-none ">
               {servicesData.map((service) => (
                 <ListItem
@@ -158,7 +158,7 @@ function ListItem({
     <li {...props}>
       <NavigationMenuLink asChild>
         <Link href={href}>
-          <div className="text-sm leading-none font-medium">{title}</div>
+          <div className="text-sm leading-none font-medium text-primary-low">{title}</div>
           <p className="text-muted-foreground line-clamp-2 text-sm leading-snug">
             {children}
           </p>

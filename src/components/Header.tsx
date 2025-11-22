@@ -12,7 +12,7 @@ function Header() {
           Business 🚀 Skyrocketing <br /> with Digital Marketing
         </h1>
 
-        <p className="text-center max-w-150 px-10 opacity-80 pb-10">Digimar internet Marketing Agency is a full-service digital marketing agency. Attract, impress, and Convert more leads online and get results with Digimar.</p>
+        <p className="text-center max-w-150 px-10 opacity-70 pb-10">Digimar internet Marketing Agency is a full-service digital marketing agency. Attract, impress, and Convert more leads online and get results with Digimar.</p>
 
       </div>
 
