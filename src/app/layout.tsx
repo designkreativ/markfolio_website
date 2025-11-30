@@ -3,15 +3,6 @@ import { Geist, Geist_Mono, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { NavbarMenu } from "@/components/NavbarMenu";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -33,7 +24,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${plusJakartaSans.variable} antialiased`}
-      > <div className="bg-gradient">
+      > <div className="bg-gradientt w-screen">
         <NavbarMenu />
         {children}
 

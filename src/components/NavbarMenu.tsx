@@ -50,26 +50,27 @@ export function NavbarMenu() {
   const isMobile = useIsMobile()
 
   return (
-    <div className="w-full flex items-center justify-center mx-auto py-4  text-white">
+    <div className="w-full flex items-center justify-center mx-auto py-4  text-white  fixed top-0 z-50">
     
     <NavigationMenu viewport={isMobile} className="container flex justify-between px-4 max-w-[1440px] ">
-      <NavigationMenuList>
+      <NavigationMenuList >
         <NavigationMenuItem>
-          
+          <Link href="/">
           <Image src={Logo} alt="Logo" width={140} height={60} />
+          </Link>
           </NavigationMenuItem>
       </NavigationMenuList>
 
       <NavigationMenuList className="flex-wrap">
       
 
-        <NavigationMenuItem className="">
+        <NavigationMenuItem className="hidden md:block">
           <NavigationMenuLink asChild className={navigationMenuTriggerStyle()} >
             <Link href="/" >Home</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
 
-        <NavigationMenuItem>
+        <NavigationMenuItem className="hidden md:block">
           <NavigationMenuTrigger>Services</NavigationMenuTrigger>
           <NavigationMenuContent >
             <ul className="grid gap-2 sm:w-[400px] md:w-[500px] md:grid-cols-2 lg:w-[600px] rounded-none ">
@@ -121,7 +122,7 @@ export function NavbarMenu() {
           </NavigationMenuContent>
         </NavigationMenuItem>
 
-        <NavigationMenuItem>
+        <NavigationMenuItem className="hidden md:block">
           <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
             <Link href="/pricing">Pricing</Link>
           </NavigationMenuLink>
