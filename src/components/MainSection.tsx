@@ -1,4 +1,6 @@
 import React from "react";
+import Image from "next/image";
+import { Check } from "lucide-react";
 
 function MainSection() {
   const mainSection = {
@@ -46,11 +48,11 @@ function MainSection() {
           title: "Technology",
         },
         {
-          id: 2,
+          id: 3,
           title: "Analytics",
         },
         {
-          id: 2,
+          id: 4,
           title: "Creativity",
         },
       ],
@@ -59,25 +61,29 @@ function MainSection() {
       subTitle: "Our Flow",
       title: "we love what we do",
       description:
-        "WWe carry out the process to achieve maximum results for the development of your business",
+        "We carry out the process to achieve maximum results for the development of your business",
       flowList: [
         {
           id: 1,
+          number: "01",
           title: "Research",
           description: "Research to find the core of the problem",
         },
         {
           id: 2,
+          number: "02",
           title: "Planning",
           description: "Collecting, measuring and analyzing insights",
         },
         {
           id: 3,
+          number: "03",
           title: "Execution",
           description: "ISteps toward reaching your planned goals",
         },
         {
           id: 4,
+          number: "04",
           title: "Optimization",
           description: "Finding solutions to your business issues",
         },
@@ -112,14 +118,72 @@ function MainSection() {
                   <h2 className="section-heading text-primary-low">
                     {service.title}
                   </h2>
-                  <p>{service.description}</p>
+                  <p className="body-font">{service.description}</p>
                 </div>
               </div>
             ))}
           </div>
 
-          {/* SECTION */}
-          <div></div>
+          {/* SECTION  | WHY CHOOSE US */}
+
+          <div className="flex items-center gap-10 py-10">
+            <div>
+              <div className="h-150 w-200 bg-teal-700"></div>
+              {/* <Image src="" alt=""></Image> */}
+            </div>
+            <div className="flex flex-col gap-5">
+              <p className="subheading text-primary-mid">
+                {mainSection.whyChooseUs.subTitle}
+              </p>
+              <h2 className="heading capitalize pr-35">
+                {mainSection.whyChooseUs.title}
+              </h2>
+              <p className="body-font">{mainSection.whyChooseUs.description}</p>
+
+              <ul className="grid grid-cols-2 gap-4">
+                {mainSection.whyChooseUs.pitchList.map((pitch) => (
+                  <li key={pitch.id} className="flex items-center gap-2">
+                    <Check
+                      size={30}
+                      className="bg-primary-mid/12 text-primary-mid rounded-sm p-0.5 "
+                    />
+                    <span className="text-primary-low font-extrabold uppercase ">
+                      {pitch.title}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          {/* SECTION | OUR FLOW */}
+          <div className="flex items-center gap-10 py-10">
+            <div className="flex flex-col gap-5">
+              <p className="subheading text-primary-mid">{mainSection.ourFlow.subTitle}</p>
+              <h2 className="heading capitalize pr-30">{mainSection.ourFlow.title}</h2>
+              <p className="body-font">{mainSection.ourFlow.description}</p>
+
+              <div className="grid grid-cols-2 gap-4">
+                {mainSection.ourFlow.flowList.map((flow) => (
+                  <div key={flow.id}>
+                    <p className="text-stroke opacity-50 absolute">
+                      {flow.number}
+                    </p>
+                    <div className="flex flex-col pl-10 pt-10 top-3">
+                      <h2 className="section-heading text-primary-low">
+                        {flow.title}
+                      </h2>
+                      <p className="body-font">{flow.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div>
+              <div className="h-150 w-200 bg-teal-700"></div>
+              {/* <Image src="" alt=""></Image> */}
+            </div>
+          </div>
         </div>
       </div>
     </main>

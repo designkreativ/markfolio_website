@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Plus_Jakarta_Sans } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { NavbarMenu } from "@/components/NavbarMenu";
+import Footer from "@/components/Footer";
 
 
 const plusJakartaSans = Plus_Jakarta_Sans({
@@ -24,9 +25,11 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${plusJakartaSans.variable} antialiased`}
-      > <div className="bg-gradientt w-screen">
+      > 
         <NavbarMenu />
         {children}
+        <Footer/>
+      <div className="bg-gradientt w-screen">
 
       </div>
       </body>

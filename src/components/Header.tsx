@@ -41,7 +41,7 @@ function Header() {
         >
         
         </div>
-        <div className="absolute h-30 bg-primary  w-screen flex justify-center items-center bottom-1 opacity-60 sepia-0 mix-blend-hue">
+        <div className="absolute h-30 bg-yellow-500  w-screen flex justify-center items-center bottom-1 opacity-60 sepia-0 mix-blend-hue">
           
           
         </div>

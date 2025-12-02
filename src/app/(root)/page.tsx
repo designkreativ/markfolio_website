@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import MainSection from "@/components/MainSection";
 import Sponcer from "@/components/Sponcer";
+import CallToAction from "@/components/CallToAction";
 import Image from "next/image";
 
 export default function Home() {
@@ -9,6 +10,7 @@ export default function Home() {
       <Header />
       <Sponcer />
       <MainSection />
+      <CallToAction />
     </div>
   );
 }
