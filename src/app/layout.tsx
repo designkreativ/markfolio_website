@@ -28,7 +28,7 @@ export default function RootLayout({
       > 
         <NavbarMenu />
         {children}
-        <Footer/>
+        {/* <Footer/> */}
       <div className="bg-gradientt w-screen">
 
       </div>

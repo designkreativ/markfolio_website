@@ -163,4 +163,10 @@
   .text-stroke {
     @apply text-7xl text-transparent font-extrabold [-webkit-text-stroke:0.8px_var(--primary-mid)] [-webkit-text-fill-color:transparent]
   }
+  .footer-h4 {
+    @apply font-extrabold text-lg
+  }
+  .footer-link {
+    @apply text-white/50
+  }
 }
