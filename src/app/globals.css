@@ -148,14 +148,40 @@
   .bg-gradient {
     @apply min-h-[20vh] bg-radial-[at_-90%_10%] from-primary from-0%  to-primary-low to-60%;
   }
-  .subheading {
-    @apply text-lg md:text-xl font-bold uppercase tracking-[10px]; 
-  }
+  
   .heading {
-    @apply text-2xl leading-15 md:text-5xl font-bold ;
+    font-size: clamp(1.2rem, 0.8rem + 2vw, 3rem);
+    font-weight: 900;
+    @apply leading-tight;
+  }
+
+  /* .heading-2 {
+    font-size: clamp(1rem, 0.5rem + 1.5vw, 2rem);
+    font-weight: 800;
+  }
+
+  .heading-3 {
+    font-size: clamp(0.75rem, 0.5rem + 1vw, 1.25rem);
+    font-weight: 700;
+  }
+
+  .paragraph-text {
+    font-size: clamp(14px, 14px + 1vw, 15px);
+  }
+
+  .caption-text {
+    font-size: clamp(0.75rem, 0.5rem + 0.75vw, 12px);
+  } */
+  
+  .subheading {
+    font-size: clamp(0.8rem, 0.4rem + 1vw, 1.5rem);
+    font-weight: bold;
+    text-transform: uppercase;
+    height: 1.5rem;
+    @apply tracking-[0.3125rem] md:tracking-[0.5rem];
   }
   .body-font {
-    @apply text-sm 
+    @apply text-sm font-light
   }
   .section-heading {
     @apply text-lg md:text-2xl font-bold;

@@ -6,8 +6,8 @@ export default function Home() {
   return (
     <div className="">
       <Header />
-      {/* <Sponcer /> */}
-      {/* <MainSection /> */}
+      <Sponcer />
+      <MainSection />
       
     </div>
   );
