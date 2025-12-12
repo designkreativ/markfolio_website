@@ -1,99 +1,17 @@
 import React from "react";
 import Image from "next/image";
-import { Check } from "lucide-react";
+import { Check} from "lucide-react";
+import Link from "next/link";
 import sectionImage from "@/assets/sectionImage.png";
+import { Button } from "./ui/button";
+import { mainSection } from "@/components/Action";
+
 
 function MainSection() {
-  const mainSection = {
-    services: {
-      subTitle: "Our Services",
-      title: "Full Service Digital Marketing Agency",
-      description:
-        "Digimar Internet Marketing Agency is a full-service digital marketing agency, Attract, Impress, and Convert more leads online and get results with Digimar",
-      servicesList: [
-        {
-          number: "01",
-          id: 1,
-          title: "Search Engine Optimization",
-          description:
-            "Through careful keyword research, we can help you achieve high rankings in the major search engines",
-        },
-        {
-          number: "02",
-          id: 2,
-          title: "Social Media Marketing",
-          description:
-            "Social media is a critical element in staying connected with your audience, we help your community engaged.",
-        },
-        {
-          number: "03",
-          id: 3,
-          title: "Web Design Development",
-          description:
-            "With millions of websites, you want to be sure your website stands out and helps your business grow.",
-        },
-      ],
-    },
-    whyChooseUs: {
-      subTitle: "Why Choose Us",
-      title: "exceptional solution for digital business model",
-      description:
-        "Our digital marketing services include consulting and management options for a variety of online marketing tactics",
-      pitchList: [
-        {
-          id: 1,
-          title: "Strategy",
-        },
-        {
-          id: 2,
-          title: "Technology",
-        },
-        {
-          id: 3,
-          title: "Analytics",
-        },
-        {
-          id: 4,
-          title: "Creativity",
-        },
-      ],
-    },
-    ourFlow: {
-      subTitle: "Our Flow",
-      title: "we love what we do",
-      description:
-        "We carry out the process to achieve maximum results for the development of your business",
-      flowList: [
-        {
-          id: 1,
-          number: "01",
-          title: "Research",
-          description: "Research to find the core of the problem",
-        },
-        {
-          id: 2,
-          number: "02",
-          title: "Planning",
-          description: "Collecting, measuring and analyzing insights",
-        },
-        {
-          id: 3,
-          number: "03",
-          title: "Execution",
-          description: "ISteps toward reaching your planned goals",
-        },
-        {
-          id: 4,
-          number: "04",
-          title: "Optimization",
-          description: "Finding solutions to your business issues",
-        },
-      ],
-    },
-  };
   return (
     <main className="mx-auto max-w-[1440px] px-2 md:px-4">
       <div className="">
+
         <div className="flex flex-col md:flex-row md:items-end gap-5">
           <div className="flex flex-col  gap-2 mt-10">
             <p className="subheading text-primary-mid">
@@ -103,7 +21,7 @@ function MainSection() {
               {mainSection.services.title}
             </h1>
           </div>
-          <p className="body-font">{mainSection.services.description}</p>
+          <p className="body-font">{mainSection.services.excerpt}</p>
         </div>
 
         {/* SERVICES LIST */}
@@ -114,11 +32,18 @@ function MainSection() {
               <p className="text-stroke opacity-50 absolute">
                 {service.number}
               </p>
-              <div className="flex flex-col pl-10 pt-10 top-3">
-                <h2 className="section-heading text-primary-low">
+              <div className="flex flex-col pl-10 pt-10 top-3 bg-">
+                <h2 className="section-heading text-primary-dark">
                   {service.title}
                 </h2>
-                <p className="body-font">{service.description}</p>
+                <p className="body-font">{service.excerpt}</p>
+                <Button
+                  variant="outline"
+                  className="mt-4 text-primary-mid/40 w-fit"
+                  size="sm"
+                >
+                  <Link href={service.link}>Learn More</Link>
+                </Button>
               </div>
             </div>
           ))}
@@ -128,13 +53,13 @@ function MainSection() {
 
         <div className="flex flex-col md:flex-row items-center gap-10 py-10">
           <div className="flex-1">
-            <Image src={sectionImage} alt="image section"/>
+            <Image src={sectionImage} alt="image section" />
           </div>
           <div className="flex-1 flex flex-col gap-2 ">
             <p className="subheading text-primary-mid">
               {mainSection.whyChooseUs.subTitle}
             </p>
-            <h2 className="heading capitalize pb-1">
+            <h2 className="heading capitalize pb-1 text-primary-dark">
               {mainSection.whyChooseUs.title}
             </h2>
             <p className="body-font">{mainSection.whyChooseUs.description}</p>
@@ -161,7 +86,7 @@ function MainSection() {
             <p className="subheading text-primary-mid">
               {mainSection.ourFlow.subTitle}
             </p>
-            <h2 className="heading capitalize pb-1">
+            <h2 className="heading capitalize pb-1 text-primary-dark">
               {mainSection.ourFlow.title}
             </h2>
             <p className="body-font">{mainSection.ourFlow.description}</p>
@@ -173,7 +98,7 @@ function MainSection() {
                     {flow.number}
                   </p>
                   <div className="flex flex-col pl-10 pt-10 top-3">
-                    <h2 className="section-heading text-primary-low">
+                    <h2 className="section-heading text-primary-dark">
                       {flow.title}
                     </h2>
                     <p className="body-font">{flow.description}</p>
@@ -183,7 +108,7 @@ function MainSection() {
             </div>
           </div>
           <div className="flex-1">
-            <Image src={sectionImage} alt="image section"/>
+            <Image src={sectionImage} alt="image section" />
           </div>
         </div>
       </div>

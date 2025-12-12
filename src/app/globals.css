@@ -146,13 +146,14 @@
 @layer components {
   
   .bg-gradient {
-    @apply min-h-[20vh] bg-radial-[at_-90%_10%] from-primary from-0%  to-primary-low to-60%;
+    @apply min-h-[8vh] bg-radial-[at_-90%_10%] from-primary from-0%  to-primary-low to-60%;
   }
   
   .heading {
     font-size: clamp(1.2rem, 0.8rem + 2vw, 3rem);
     font-weight: 900;
     @apply leading-tight;
+    
   }
 
   /* .heading-2 {
@@ -178,10 +179,10 @@
     font-weight: bold;
     text-transform: uppercase;
     height: 1.5rem;
-    @apply tracking-[0.3125rem] md:tracking-[0.5rem];
+    @apply tracking-[0.3125rem] md:tracking-[0.5rem] uppercase;
   }
   .body-font {
-    @apply text-sm font-light
+    @apply text-sm font-light leading-5 md:leading-7
   }
   .section-heading {
     @apply text-lg md:text-2xl font-bold;
