@@ -118,4 +118,34 @@ export const mainSection = {
       },
     ],
   },
+  projects: [
+    {
+      id: 1,
+      title: "10 Professional online tools the increase your productivity",
+      description:
+        "Silverthorne, CO – JHL Constructors, in partnership with the Town of Silverthorne, Collab Architecture,",
+      imageUrl: sectionImage1,
+    },
+    {
+      id: 2,
+      title: "10 Professional online tools the increase your productivity",
+      description:
+        "Silverthorne, CO – JHL Constructors, in partnership with the Town of Silverthorne, Collab Architecture,",
+      imageUrl: sectionImage1,
+    },
+    {
+      id: 3,
+      title: "10 Professional online tools the increase your productivity",
+      description:
+        "Silverthorne, CO – JHL Constructors, in partnership with the Town of Silverthorne, Collab Architecture,",
+      imageUrl: sectionImage1,
+    },
+    {
+      id: 4,
+      title: "10 Professional online tools the increase your productivity",
+      description:
+        "Silverthorne, CO – JHL Constructors, in partnership with the Town of Silverthorne, Collab Architecture,",
+      imageUrl: sectionImage1,
+    },
+  ]
 };
