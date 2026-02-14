@@ -1,3 +1,5 @@
+import sectionImage1 from "@/assets/sectionImage.jpg";
+
 export const mainSection = {
   services: {
     subTitle: "Our Services",
@@ -17,6 +19,23 @@ export const mainSection = {
         link: "#",
         description:
           "Through careful keyword research, we can help you achieve high rankings in the major search engines Through careful keyword research, we can help you achieve high rankings in the major search engines Through careful keyword research, we can help you achieve high rankings in the major search engines",
+        list1: true,
+        sublist: [
+          {
+            id: 1,
+            title: "Keyword Research",
+            description:
+              "Social media is a critical element in staying connected with your audience, we help your community engaged.",
+            image: sectionImage1,
+          },
+          {
+            id: 2,
+            title: "On-Page SEO",
+            description:
+              "Optimization of individual web pages to rank higher and earn more relevant traffic",
+            image: sectionImage1,
+          },
+        ],
       },
       {
         number: "02",
@@ -27,6 +46,7 @@ export const mainSection = {
         link: "#",
         description:
           "Social media is a critical element in staying connected with your audience, we help your community engaged. Social media is a critical element in staying connected with your audience, we help your community engaged.Social media is a critical element in staying connected with your audience, we help your community engaged.",
+        list2: true,
       },
       {
         number: "03",
@@ -37,6 +57,8 @@ export const mainSection = {
         link: "#",
         description:
           "Design. websites, you want to be sure your website stands out and helps your business grow.  millions of websites, you want to be sure your website stands out and helps your business grow.",
+        list3: true,
+        image: sectionImage1,
       },
     ],
   },

@@ -23,7 +23,7 @@ export default function Sponcer() {
         <p className="subheading text-primary-mid">
           {sponcerData.details.title}
         </p>
-        <h2 className="heading text-primary-low">
+        <h2 className="heading text-primary-dark">
           {sponcerData.details.subtitle}
         </h2>
       </div>

@@ -152,7 +152,7 @@
   .heading {
     font-size: clamp(1.2rem, 0.8rem + 2vw, 3rem);
     font-weight: 900;
-    @apply leading-tight;
+    @apply leading-tight ;
     
   }
 
@@ -179,16 +179,25 @@
     font-weight: bold;
     text-transform: uppercase;
     height: 1.5rem;
-    @apply tracking-[0.3125rem] md:tracking-[0.5rem] uppercase;
+    @apply tracking-[0.3125rem] md:tracking-[0.5rem];
   }
   .body-font {
-    @apply text-sm font-light leading-5 md:leading-7
+    @apply text-sm font-light
   }
   .section-heading {
     @apply text-lg md:text-2xl font-bold;
   }
+  .inner-heading {
+    @apply text-sm md:text-base font-bold;
+  }
+  /* .text-stroke1 {
+    @apply text-7xl text-transparent font-extrabold [-webkit-text-stroke:0.8px_linear_gradient(-86deg, #EEF85B 5%, #7AEC8D 53%, #09E5C3 91%)] 
+    [-webkit-text-fill-color:transparent]
+  } */
+
   .text-stroke {
-    @apply text-7xl text-transparent font-extrabold [-webkit-text-stroke:0.8px_var(--primary-mid)] [-webkit-text-fill-color:transparent]
+    @apply text-6xl text-transparent font-extrabold [-webkit-text-stroke:0.6px_var(--primary-mid)] 
+    [-webkit-text-fill-color:transparent]
   }
   .footer-h4 {
     @apply font-extrabold text-lg
