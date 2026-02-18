@@ -147,5 +147,52 @@ export const mainSection = {
         "Silverthorne, CO – JHL Constructors, in partnership with the Town of Silverthorne, Collab Architecture,",
       imageUrl: sectionImage1,
     },
-  ]
+  ],
+  priceCards: [
+    {
+      id: 1,
+      price: "$19.99",
+      title: "Basic",
+      description: "Perfect for individuals and small teams starting out",
+      features: [
+        "Feature 1",
+        "Feature 2",
+        "Feature 3",
+        "Feature 4",
+        "Feature 5",
+      ],
+      popular: false,
+    },
+    {
+      id: 2,
+      price: "$49.99",
+      title: "Pro",
+      description: "Ideal for growing businesses and professionals",
+      features: [
+        "Feature 1",
+        "Feature 2",
+        "Feature 3",
+        "Feature 4",
+        "Feature 5",
+        "Feature 6",
+      ],
+      popular: true,
+    },
+    {
+      id: 3,
+      price: "$99.99",
+      title: "Enterprise",
+      description: "Best for large organizations with advanced needs",
+      features: [
+        "Feature 1",
+        "Feature 2",
+        "Feature 3",
+        "Feature 4",
+        "Feature 5",
+        "Feature 6",
+        "Feature 7",
+      ],
+      popular: false,
+    },
+]
 };
