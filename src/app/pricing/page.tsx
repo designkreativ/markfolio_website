@@ -29,58 +29,58 @@ function page() {
             <div
               key={card.id}
               className={`border rounded-4xl p-6 flex flex-col gap-2 relative ${
-          card.popular ? " bg-primary-low" : " bg-gray-100"
+                card.popular ? " bg-primary-low" : " bg-gray-100"
               }`}
             >
               {card.popular && (
-          <p className="absolute top-4 right-4 bg-primary-mid text-white text-xs font-bold px-3 py-1 rounded-full">
-            MOST POPULAR
-          </p>
+                <p className="absolute top-4 right-4 bg-primary-mid text-white text-xs font-bold px-3 py-1 rounded-full">
+                  MOST POPULAR
+                </p>
               )}
               <h2
-          className={`text-2xl font-bold pb-2 ${card.popular ? "text-white" : "text-primary-low"}`}
+                className={`text-2xl font-bold pb-2 ${card.popular ? "text-white" : "text-primary-low"}`}
               >
-          {card.price}
-          <span className="text-sm font-light pl-1">/month</span>
+                ${card.price}
+                <span className="text-sm font-light pl-1">/month</span>
               </h2>
               <p
-          className={`section-heading text-primary-low ${card.popular ? "text-white" : ""}`}
+                className={`section-heading text-primary-low ${card.popular ? "text-white" : ""}`}
               >
-          {card.title}
+                {card.title}
               </p>
               <p
-          className={`body-font ${card.popular ? "text-white" : "text-primary-low"}`}
+                className={`body-font ${card.popular ? "text-white" : "text-primary-low"}`}
               >
-          {card.description}
+                {card.description}
               </p>
               <div
-          className={`body-font pb-4 ${card.popular ? "text-white" : "text-primary-low"}`}
+                className={`body-font pb-4 ${card.popular ? "text-white" : "text-primary-low"}`}
               >
-          {card.features.map((feature, index) => (
-            <div key={index} className="flex items-center pt-2 gap-2 ">
-              <Check
-                size={25}
-                className={` text-primary-light rounded-sm p-0.5 ${card.popular ? "bg-primary-light/12" :  "bg-white"}`}
-              />
-              <p className=" ">{feature}</p>
-            </div>
-          ))}
+                {card.features.map((feature, index) => (
+                  <div key={index} className="flex items-center pt-2 gap-2 ">
+                    <Check
+                      size={25}
+                      className={` text-primary-light rounded-sm p-0.5 ${card.popular ? "bg-primary-light/12" : "bg-white"}`}
+                    />
+                    <p className=" ">{feature}</p>
+                  </div>
+                ))}
               </div>
               <button
-          className={`mt-auto py-2 px-4 rounded-full inner-heading ${
-            card.popular
-              ? "bg-primary-light text-primary-low"
-              : "bg-primary-low text-white"
-          }`}
+                className={`mt-auto py-2 px-4 rounded-full inner-heading ${
+                  card.popular
+                    ? "bg-primary-light text-primary-low"
+                    : "bg-primary-low text-white"
+                }`}
               >
-          Choose Plan
+                Choose Plan
               </button>
             </div>
           ))}
         </div>
-            </div>
-          </div>
-        );
-      }
+      </div>
+    </div>
+  );
+}
 
-      export default page;
+export default page;

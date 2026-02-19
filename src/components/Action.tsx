@@ -151,20 +151,15 @@ export const mainSection = {
   priceCards: [
     {
       id: 1,
-      price: "$19.99",
+      price: "19.99",
       title: "Starter",
       description: "Unleash the power of automation.",
-      features: [
-        "Multi-step Zaps",
-        "3 Premium Apps",
-        "2 Users team",
-    
-      ],
+      features: ["Multi-step Zaps", "3 Premium Apps", "2 Users team"],
       popular: false,
     },
     {
       id: 2,
-      price: "$49.99",
+      price: "49.99",
       title: "Professional",
       description: "Advanced tools to take your work to the next level.",
       features: [
@@ -172,13 +167,12 @@ export const mainSection = {
         "Unlimited Premium Apps",
         "50 Users team",
         "Shared Workspace",
-    
       ],
-      popular: true,
+      popular: false,
     },
     {
       id: 3,
-      price: "$99.99",
+      price: "99.99",
       title: "Enterprise",
       description: "Automation plus enterprise-grade features.",
       features: [
@@ -188,9 +182,15 @@ export const mainSection = {
         "Advanced Analytics",
         "Advanced Admin Controls",
         "Custom Data Retention",
-    
       ],
-      popular: false,
+      popular: true,
     },
-]
+  ],
+  contactUs: {
+    workingHours: "Call our team Monday - Friday from 8 am to 5pm ",
+    phone: "+1 (555) 000 - 0000",
+    address: "100 Smith Street, Collingwood VIC 3"
+
+
+  }
 };
