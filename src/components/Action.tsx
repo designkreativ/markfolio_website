@@ -189,6 +189,7 @@ export const mainSection = {
   contactUs: {
     workingHours: "Call our team Monday - Friday from 8 am to 5pm ",
     phone: "+1 (555) 000 - 0000",
+    addressDesc: "Chat to us in person at our Melbon HQ",
     address: "100 Smith Street, Collingwood VIC 3"
 
 
